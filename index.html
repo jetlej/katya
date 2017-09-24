@@ -11,7 +11,7 @@
 	<!-- Place favicon.ico in the root directory -->
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css?rel=1506288193636">
+	<link rel="stylesheet" href="css/style.css?rel=1506293260162">
 	<script src="js/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -58,11 +58,15 @@
 
 	</section>
 
-	<section class="connect">
+	<section class="contact center">
+		<a class="btn btn-xl" href="mailto:booking@katyalee.com">Connect</a>
+	</section>
+
+	<!--<section class="connect">
 
 		<h2 class="line-through">Connect</h2>
 
-		<div class="container container-sm">
+		<div class="container container-xs">
 			<form>
 
 				<div id="message" class="alert alert-success center hide">
@@ -91,17 +95,26 @@
 					<button type="submit" class="btn btn-xl" id="submit">Submit</button>
 				</div>
 
-			</form>
+			</form
 		</div>
 
-	</section>
+	</section>-->
 
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
-	<script src="js/scripts.min.js"></script>
-	<script src="https://smtpjs.com/smtp.js"></script>
+	<script src="js/scripts.min.js?rel=1506288822366"></script>
+	<!--<script src="https://smtpjs.com/smtp.js"></script>-->
 	<script>
 		$(function(){
+
+			setTimeout(function(){
+				$('.hero').addClass('visible');
+
+				setTimeout(function(){
+					$('.social').addClass('visible');
+				}, 1000);
+
+			}, 500);
 
 			$('.switcher span').on('click', function(){
 
@@ -142,13 +155,6 @@
 					});
 					emailBody += '</bod';
 					emailBody += 'y></html>';
-
-					Email.send(email,
-						"booking@katyalee.com",
-						subject,
-						emailBody,
-						{token: "b6a09c57-70be-4827-856b-ebede6c28e65"}
-						);
 
 				}
 			});

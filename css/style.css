@@ -1,5 +1,4 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -250,22 +249,19 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important; } }
 @font-face {
-  font-family: 'Museo';
-  src: url("fonts/Museo-300.eot");
-  src: url("fonts/Museo-300.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-300.woff") format("woff"), url("fonts/Museo-300.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Museo';
-  src: url("fonts/Museo-500.eot");
-  src: url("fonts/Museo-500.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-500.woff") format("woff"), url("fonts/Museo-500.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: 'Museo';
-  src: url("fonts/Museo-700.eot");
-  src: url("fonts/Museo-700.eot?#iefix") format("embedded-opentype"), url("fonts/Museo-700.woff") format("woff"), url("fonts/Museo-700.ttf") format("truetype");
+  font-family: 'Glacial Indifference';
+  src: url("../fonts/glacialindifference-bold-webfont.woff2") format("woff2"), url("../fonts/glacialindifference-bold-webfont.woff") format("woff");
   font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url("../fonts/glacialindifference-italic-webfont.woff2") format("woff2"), url("../fonts/glacialindifference-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italics; }
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url("../fonts/glacialindifference-regular-webfont.woff2") format("woff2"), url("../fonts/glacialindifference-regular-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "icons";
@@ -324,7 +320,7 @@ html {
       font-size: 80%; } }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Glacial Indifference", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #363636;
@@ -608,7 +604,7 @@ ol {
     font-size: 14px !important;
     line-height: 100%;
     margin: 5px 0 15px;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Glacial Indifference", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .list-lg li {
   padding-bottom: 15px; }
@@ -740,7 +736,7 @@ address {
       width: 1130px; } }
   .container.container-sm {
     width: 970px !important; }
-  .container.slim, .container.container-xs {
+  .container.container-xs {
     width: 768px !important; }
 
 .section {
@@ -805,11 +801,6 @@ address {
     display: table; }
   .container-xl:after {
     clear: both; }
-
-.container-sm {
-  width: 800px;
-  max-width: 100%;
-  margin: 0 auto; }
 
 .row {
   margin-left: -15px;
@@ -2180,7 +2171,7 @@ select[multiple].input-sm {
 .input-lg {
   height: 46px;
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 46px;
   border-radius: 0; }
 
@@ -2193,15 +2184,15 @@ select[multiple].input-lg {
   height: auto; }
 
 .input-xl {
-  height: 50px;
+  height: 52px;
   padding: 12px 22px;
-  font-size: 13px;
-  line-height: 50px;
+  font-size: 14px;
+  line-height: 52px;
   border-radius: 2px; }
 
 select.input-xl {
-  height: 50px;
-  line-height: 50px; }
+  height: 52px;
+  line-height: 52px; }
 
 textarea.input-xl,
 select[multiple].input-xl {
@@ -2392,7 +2383,8 @@ select[multiple].input-xl {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus {
-    color: #5E7E95;
+    background: black;
+    color: white;
     text-decoration: none; }
   .btn:active, .btn.active {
     outline: 0;
@@ -2598,9 +2590,9 @@ select[multiple].input-xl {
 
 .btn-xl {
   padding: 0 22px;
-  height: 50px;
-  font-size: 13px;
-  line-height: 46px;
+  height: 52px;
+  font-size: 14px;
+  line-height: 48px;
   border-radius: 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -3576,7 +3568,11 @@ section {
   color: black;
   height: 100vh;
   position: relative;
-  padding: 0; }
+  padding: 0;
+  opacity: 0;
+  transition: all .5s ease-in; }
+  .hero.visible {
+    opacity: 1; }
   @media (max-width: 992px) {
     .hero {
       height: 600px; } }
@@ -3602,7 +3598,13 @@ section {
     position: absolute;
     bottom: 40px;
     width: 100%;
-    font-size: 40px; }
+    font-size: 40px;
+    transition: all .4s ease-out;
+    opacity: 0;
+    bottom: 0; }
+    .hero .social.visible {
+      opacity: 1;
+      bottom: 40px; }
     @media (max-width: 768px) {
       .hero .social {
         font-size: 32px;

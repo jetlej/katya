@@ -296,7 +296,7 @@ input[type="checkbox"],
 
 @include input-size('.input-sm', $input-height-small, $padding-small-vertical, 0, $font-size-small, $input-height-small, $border-radius-small);
 
-@include input-size('.input-lg', $input-height-large, $padding-large-vertical, 0, 13px, $input-height-large, 0);
+@include input-size('.input-lg', $input-height-large, $padding-large-vertical, 0, 14px, $input-height-large, 0);
 
 @include input-size('.input-xl', $input-height-xl, $padding-xl-vertical, $padding-xl-horizontal, $font-size-xl, $input-height-xl, $border-radius-xl);
 

@@ -34,7 +34,8 @@
 
   &:hover,
   &:focus {
-    color: $btn-default-color;
+    background: black;
+    color: white;
     text-decoration: none;
   }
 

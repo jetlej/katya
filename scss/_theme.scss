@@ -37,6 +37,12 @@ section{
 	height: 100vh;
 	position: relative;
 	padding: 0;
+	opacity: 0;
+	transition: all .5s ease-in;
+
+	&.visible{
+		opacity: 1;
+	}
 
 	@media (max-width: $screen-md-min) {
 		height: 600px;
@@ -72,6 +78,14 @@ section{
 		bottom: 40px;
 		width: 100%;
 		font-size: 40px;
+		transition: all .4s ease-out;
+		opacity: 0;
+		bottom: 0;
+
+		&.visible{
+			opacity: 1;
+			bottom: 40px;
+		}
 
 		@media (max-width: $screen-sm-min) {
 			font-size: 32px;

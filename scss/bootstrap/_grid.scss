@@ -29,7 +29,7 @@
 		width: 970px !important;
 	}
 
-	&.slim, &.container-xs{
+	&.container-xs{
 		width: 768px !important;
 	}
 }
@@ -86,12 +86,6 @@
 	width: 100% !important;
 	max-width: 1600px;
 	position: static;
-}
-
-.container-sm{
-	width: 800px;
-	max-width: 100%;
-	margin: 0 auto;
 }
 
 // Row
