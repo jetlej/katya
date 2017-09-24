@@ -46,8 +46,24 @@ section{
 		height: 500px;
 	}
 
-	@media (max-width: $screen-xs-min) {
+	@media (max-width: 620px) {
 		height: 100vh;
+		background: url(../images/hero-mobile.jpg);
+	}
+
+	.mobile-logo{
+		display: none;
+		text-align: center;
+		padding: 50px 40px 0;
+
+		@media (max-width: 620px) {
+			display: block;
+		}
+
+		img{
+			width: 400px;
+			max-width: 100%;
+		}
 	}
 
 	.social{
@@ -92,12 +108,17 @@ section{
 	padding-top: 50px;
 
 	.three{
-		height: 550px;
+		height: 682px;
 		background-image: url(../images/katya.jpg);
-		background-size: 685px 500px;
+		background-size: 935px 682px;
 		background-position: center center;
 		background-repeat-y: no-repeat;
 		margin-bottom: 60px;
+
+		@media (max-width: $screen-sm-min) {
+			background-size: 685px 500px;
+			height: 500px;
+		}
 	}
 
 	.switcher{
@@ -130,11 +151,15 @@ section{
 
 	p{
 		color: #444;
-		font-size: 15px;
+		font-size: 18px;
 		margin: 0 auto;
 		line-height: 180%;
 		width: 800px;
 		max-width: 100%;
+
+		@media (max-width: $screen-xs-min) {
+			font-size: 15px;
+		}
 	}
 
 }
