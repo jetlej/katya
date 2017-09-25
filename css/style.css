@@ -3580,8 +3580,7 @@ section {
       height: 500px; } }
   @media (max-width: 620px) {
     .hero {
-      height: 100vh;
-      background: url(../images/hero-mobile.jpg); } }
+      height: 100vh; } }
   .hero .mobile-logo {
     display: none;
     text-align: center;

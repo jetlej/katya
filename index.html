@@ -10,7 +10,7 @@
 	<link rel="apple-touch-icon" href="images/favicon.png">
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css?rel=1506302677620">
+	<link rel="stylesheet" href="css/style.css?rel=1506302915788">
 	<script src="js/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -110,17 +110,35 @@
 <script>
 	$(function(){
 
-		$('<img/>').attr('src', 'images/hero.jpg').on('load', function() {
+		if($(window).width() > 620){
 
-			$(this).remove();
-			$('.hero').css('background-image', 'url(images/hero.jpg)');
-			$('.hero').addClass('visible');
+			$('<img/>').attr('src', 'images/hero.jpg').on('load', function() {
 
-			setTimeout(function(){
-				$('.social').addClass('visible');
-			}, 750);
+				$(this).remove();
+				$('.hero').css('background-image', 'url(images/hero.jpg)');
+				$('.hero').addClass('visible');
 
-		});
+				setTimeout(function(){
+					$('.social').addClass('visible');
+				}, 750);
+
+			});
+
+		}else{
+
+			$('<img/>').attr('src', 'images/hero-mobile.jpg').on('load', function() {
+
+				$(this).remove();
+				$('.hero').css('background-image', 'url(images/hero-mobile.jpg)');
+				$('.hero').addClass('visible');
+
+				setTimeout(function(){
+					$('.social').addClass('visible');
+				}, 750);
+
+			});
+
+		}
 
 		$('.switcher span').on('click', function(){
 
