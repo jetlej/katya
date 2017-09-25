@@ -3625,7 +3625,8 @@ section {
         font-size: 1.2em; }
 
 .about {
-  padding-top: 50px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .about .three {
     height: 682px;
     background-image: url(../images/katya.jpg);
