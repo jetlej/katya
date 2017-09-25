@@ -3569,7 +3569,7 @@ section {
   position: relative;
   padding: 0;
   opacity: 0;
-  transition: all .5s ease-in; }
+  transition: all .75s ease-in; }
   .hero.visible {
     opacity: 1; }
   @media (max-width: 992px) {
