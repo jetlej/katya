@@ -10,7 +10,7 @@
 	<link rel="apple-touch-icon" href="favicon.png">
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css?rel=1506301982573">
+	<link rel="stylesheet" href="css/style.css?rel=1506302056167">
 	<script src="js/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -110,14 +110,17 @@
 <script>
 	$(function(){
 
-		setTimeout(function(){
+		$('<img/>').attr('src', 'images/hero.jpg').on('load', function() {
+
+			$(this).remove();
+			$('.hero').css('background-image', 'url(images/hero.jpg)');
 			$('.hero').addClass('visible');
 
 			setTimeout(function(){
 				$('.social').addClass('visible');
-			}, 1000);
+			}, 750);
 
-		}, 250);
+		});
 
 		$('.switcher span').on('click', function(){
 
