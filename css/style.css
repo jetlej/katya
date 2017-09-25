@@ -2184,15 +2184,15 @@ select[multiple].input-lg {
   height: auto; }
 
 .input-xl {
-  height: 52px;
+  height: 59px;
   padding: 12px 22px;
   font-size: 14px;
-  line-height: 52px;
+  line-height: 59px;
   border-radius: 2px; }
 
 select.input-xl {
-  height: 52px;
-  line-height: 52px; }
+  height: 59px;
+  line-height: 59px; }
 
 textarea.input-xl,
 select[multiple].input-xl {
@@ -2590,9 +2590,9 @@ select[multiple].input-xl {
 
 .btn-xl {
   padding: 0 22px;
-  height: 52px;
+  height: 59px;
   font-size: 14px;
-  line-height: 48px;
+  line-height: 55px;
   border-radius: 0;
   padding-left: 30px;
   padding-right: 30px;
